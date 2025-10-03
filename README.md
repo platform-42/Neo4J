@@ -6,6 +6,15 @@ The setup is as such that graph.py is a client app that can run anywhere.
 graph.py utilizes bolt driver to execute Cypher commands
 
 
+## PROJECT STRUCTURE
+./doc/CypherV2.pdf -> explanation of Cypher
+./lib/vertices.py -> graph nodes
+./lib/edges.py -> graph relationships
+./lib/cypher.py -> cypher commands to create nodes and relationships
+./etc/graph.env -> environment file with NEO4J Aura settings
+./ops/start.sh -> shell script to run graph.py
+./graph.py -> main program
+
 ## NEO4J Aura
 In order to avoid an Neo4J installation on-prem, you just create on in the cloud
 The account that you create is called a PROJECT_ADMIN account. That one has NO access to graph database or graph tools. It is to setup your project in Neo4J Aura (cloud version).
