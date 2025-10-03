@@ -32,3 +32,8 @@ driver: Driver = GraphDatabase.driver(URI, auth=basic_auth(NEO4J_USERNAME, NEO4J
 ## LOGIN INTO AURA
 user: diederick.de.buck@gmail.com
 password: M8rioAndretti!
+
+## RUNNING GRAPH PROGRAM
+
+pip3 install neo4j
+python3 graph.py
