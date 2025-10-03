@@ -2,19 +2,19 @@ from typing import List
 
 def cities() -> List[str]:
     return [
-        "Amsterdam", 
-        "Rotterdam", 
-        "Utrecht", 
-        "Den Haag", 
+        "Amsterdam",
+        "Rotterdam",
+        "Utrecht",
+        "Den Haag",
         "Alkmaar",
         "Goes",
-        "Veere", 
-        "Leiden", 
-        "Delft", 
+        "Veere",
+        "Leiden",
+        "Delft",
         "Hengelo",
-        "Enschede", 
-        "Assen", 
-        "Maastricht", 
-        "Zwolle", 
+        "Enschede",
+        "Assen",
+        "Maastricht",
+        "Zwolle",
         "Eindhoven"
     ]
