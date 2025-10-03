@@ -1,4 +1,4 @@
-from neo4j import GraphDatabase, Transaction, Driver, basic_auth
+from neo4j import GraphDatabase, Driver, basic_auth
 from lib import edges
 from lib import vertices
 from lib import cypher
