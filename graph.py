@@ -7,12 +7,12 @@ from lib import cypher
 
 if __name__ == '__main__':
     db_uri = os.getenv("NEO4J_URI")
-    db_username = os.getenv("NEO4J_USERNAME")  
+    db_username = os.getenv("NEO4J_USERNAME")
     db_password = os.getenv("NEO4J_PASSWORD")
     db_database = os.getenv("NEO4J_DATABASE")
 
     driver: Driver = GraphDatabase.driver(
-        db_uri, 
+        db_uri,
         auth=basic_auth(db_username, db_password)
     )
     with driver.session(database=db_database) as session:
