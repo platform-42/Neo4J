@@ -21,4 +21,3 @@ if __name__ == '__main__':
         for city1, city2, distance, max_speed in edges.roads():
             session.execute_write(cypher.create_road, city1, city2, distance, max_speed)
     driver.close()
-
