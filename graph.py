@@ -63,11 +63,12 @@ def create_road(tx: Transaction, city1: str, city2: str, distance: int, max_spee
         max_speed=max_speed
     )
 
-driver: Driver = GraphDatabase.driver(URI, auth=basic_auth(USERNAME, PASSWORD))
-with driver.session() as session:
-    for city in cities():
-        session.execute_write(create_city, city)
-    for city1, city2, distance, max_speed in roads():
-        session.execute_write(create_road, city1, city2, distance, max_speed)
-driver.close()
+if __name__ == '__main__':
+    driver: Driver = GraphDatabase.driver(URI, auth=basic_auth(USERNAME, PASSWORD))
+    with driver.session() as session:
+        for city in cities():
+            session.execute_write(create_city, city)
+        for city1, city2, distance, max_speed in roads():
+            session.execute_write(create_road, city1, city2, distance, max_speed)
+    driver.close()
 
