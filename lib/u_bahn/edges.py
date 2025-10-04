@@ -1,6 +1,6 @@
 from typing import List, Tuple
 
-def u2() -> List[Tuple[str, str, float]]:
+def u2_line() -> List[Tuple[str, str, float]]:
     return [
         ('Pankow','Vinetastraße', 1.2),
         ('Vinetastraße','Schönhauser Allee', 0.9),
@@ -32,7 +32,7 @@ def u2() -> List[Tuple[str, str, float]]:
         ('Olympia-Stadion','Ruhleben', 1.2)
     ]
 
-def u6() -> List[Tuple[str, str, float]]:
+def u6_line() -> List[Tuple[str, str, float]]:
     return [
         ("Französische Straße", "Stadtmitte", 0.7),
         ("Stadtmitte", "Kochstraße", 0.8)

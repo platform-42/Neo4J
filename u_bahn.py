@@ -24,11 +24,11 @@ if __name__ == '__main__':
             session.execute_write(cypher.create_station, name)
 
         # Create U2 tracks
-        for city1, city2, distance in edges.u2():
+        for city1, city2, distance in edges.u2_line():
             session.execute_write(cypher.create_track, city1, city2, "U2", distance)
 
         # Create U6 tracks
-        for city1, city2, distance in edges.u6():
+        for city1, city2, distance in edges.u6_line():
             session.execute_write(cypher.create_track, city1, city2, "U6", distance)
 
     driver.close()
