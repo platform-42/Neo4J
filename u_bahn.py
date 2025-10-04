@@ -5,7 +5,7 @@ from lib.u_bahn import edges
 from lib.u_bahn import vertices
 from lib.u_bahn import cypher
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     db_uri = os.getenv("NEO4J_URI")
     db_username = os.getenv("NEO4J_USERNAME")
     db_password = os.getenv("NEO4J_PASSWORD")

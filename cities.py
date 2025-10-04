@@ -5,7 +5,7 @@ from lib.cities import edges
 from lib.cities import vertices
 from lib.cities import cypher
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     db_uri = os.getenv("NEO4J_URI")
     db_username = os.getenv("NEO4J_USERNAME")
     db_password = os.getenv("NEO4J_PASSWORD")
@@ -15,7 +15,7 @@ if __name__ == '__main__':
         db_uri,
         auth=basic_auth(db_username, db_password)
     )
-    
+
     with driver.session(database=db_database) as session:
         session.execute_write(cypher.clear_database)
 
