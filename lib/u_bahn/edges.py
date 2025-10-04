@@ -34,6 +34,32 @@ def u2_line() -> List[Tuple[str, str, float]]:
 
 def u6_line() -> List[Tuple[str, str, float]]:
     return [
-        ("Französische Straße", "Stadtmitte", 0.7),
-        ("Stadtmitte", "Kochstraße", 0.8)
+        ("Alt-Tegel", "Borsigwerke", 0.9),
+        ("Borsigwerke", "Holzhauser Straße", 0.8),
+        ("Holzhauser Straße", "Otisstraße", 0.7),
+        ("Otisstraße", "Scharnweberstraße", 1.0),
+        ("Scharnweberstraße", "Kurt-Schumacher-Platz", 1.2),
+        ("Kurt-Schumacher-Platz", "Afrikanische Straße", 1.4),
+        ("Afrikanische Straße", "Rehberge", 0.8),
+        ("Rehberge", "Seestraße", 0.9),
+        ("Seestraße", "Leopoldplatz", 0.7),
+        ("Leopoldplatz", "Wedding", 0.9),
+        ("Wedding", "Reinickendorfer Straße", 0.7),
+        ("Reinickendorfer Straße", "Schwartzkopffstraße", 0.9),
+        ("Schwartzkopffstraße", "Naturkundemuseum", 0.8),
+        ("Naturkundemuseum", "Oranienburger Tor", 0.7),
+        ("Oranienburger Tor", "Friedrichstraße", 0.6),
+        ("Friedrichstraße", "Französische Straße", 0.5),
+        ("Französische Straße", "Stadtmitte", 0.4),     # interchange with U2
+        ("Stadtmitte", "Kochstraße", 0.6),
+        ("Kochstraße", "Hallesches Tor", 1.2),
+        ("Hallesches Tor", "Mehringdamm", 0.8),         # interchange with U1/U3
+        ("Mehringdamm", "Platz der Luftbrücke", 1.0),
+        ("Platz der Luftbrücke", "Paradestraße", 0.9),
+        ("Paradestraße", "Tempelhof", 1.2),
+        ("Tempelhof", "Alt-Tempelhof", 0.7),
+        ("Alt-Tempelhof", "Kaiserin-Augusta-Straße", 0.8),
+        ("Kaiserin-Augusta-Straße", "Ullsteinstraße", 0.7),
+        ("Ullsteinstraße", "Westphalweg", 0.9),
+        ("Westphalweg", "Alt-Mariendorf", 0.8),
     ]

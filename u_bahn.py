@@ -28,7 +28,7 @@ if __name__ == '__main__':
             session.execute_write(cypher.create_track, city1, city2, "U2", distance)
 
         # Create U6 tracks
-#        for city1, city2, distance in edges.u6_line():
-#            session.execute_write(cypher.create_track, city1, city2, "U6", distance)
+        for city1, city2, distance in edges.u6_line():
+            session.execute_write(cypher.create_track, city1, city2, "U6", distance)
 
     driver.close()
