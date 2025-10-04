@@ -7,13 +7,13 @@ graph.py utilizes bolt driver to execute Cypher commands.
 
 
 ## PROJECT STRUCTURE
-./doc/CypherV2.pdf -> explanation of Cypher.  
-./lib/vertices.py -> graph nodes.  
-./lib/edges.py -> graph relationships.  
-./lib/cypher.py -> cypher commands to create nodes and relationships.  
-./etc/graph.env -> environment file with NEO4J Aura settings, derived from downloaded NEO4J Aura.  
-./ops/start.sh -> shell script to run graph.py.  
-./graph.py -> main program.  
+* ./doc/CypherV2.pdf -> explanation of Cypher.  
+* ./lib/vertices.py -> graph nodes.  
+* ./lib/edges.py -> graph relationships.  
+* ./lib/cypher.py -> cypher commands to create nodes and relationships.  
+* ./etc/graph.env -> environment file with NEO4J Aura settings, derived from downloaded NEO4J Aura.  
+* ./ops/start.sh -> shell script to run graph.py.  
+* ./graph.py -> main program.  
 
 ## NEO4J Aura
 In order to avoid Neo4J installation on-prem, you just create one in the cloud using Neo4J Aura.
