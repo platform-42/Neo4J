@@ -1,3 +1,3 @@
 cd ..
 source etc/graph.env
-python3 graph.py
+python3 cities.py

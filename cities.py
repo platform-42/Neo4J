@@ -1,9 +1,9 @@
 import os
 
 from neo4j import GraphDatabase, Driver, basic_auth
-from lib import edges
-from lib import vertices
-from lib import cypher
+from lib.cities import edges
+from lib.cities import vertices
+from lib.cities import cypher
 
 if __name__ == '__main__':
     db_uri = os.getenv("NEO4J_URI")
