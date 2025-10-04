@@ -1,12 +1,11 @@
 from neo4j import Transaction
 
+
+def clear_database(tx: Transaction) -> None:
+    tx.run("MATCH (n) DETACH DELETE n")
+
 def create_city(tx: Transaction, name: str) -> None:
-    tx.run(
-        """
-            MERGE (:City {name: $name})
-        """,
-        name=name
-    )
+    tx.run("MERGE (:City {name: $name})", name=name)
 
 def create_road(tx: Transaction, city1: str, city2: str, distance: int, max_speed: int) -> None:
     tx.run(

@@ -13,7 +13,7 @@ def u2_line() -> List[Tuple[str, str, float]]:
         ("Märkisches Museum","Spittelmarkt", 0.8),
         ("Spittelmarkt","Hausvogteiplatz", 0.7),
         ("Hausvogteiplatz","Stadtmitte", 0.5),
-        ("Stadtmitte","Mohrenstraße", 0.6),
+        ("Stadtmitte","Mohrenstraße", 0.6), # interchange with U6
         ("Mohrenstraße","Potsdamer Platz", 0.7),
         ("Potsdamer Platz","Mendelssohn-Bartholdy-Park", 0.8),
         ("Mendelssohn-Bartholdy-Park","Gleisdreieck", 0.9),

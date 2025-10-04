@@ -19,15 +19,15 @@ if __name__ == '__main__':
     with driver.session(database=db_database) as session:
         session.execute_write(cypher.clear_database)
 
-        # Create all stations
+        # Create all stations (nodes)
         for name in vertices.stations():
             session.execute_write(cypher.create_station, name)
 
-        # Create U2 tracks
+        # Create U2 tracks (edges)
         for city1, city2, distance in edges.u2_line():
             session.execute_write(cypher.create_track, city1, city2, "U2", distance)
 
-        # Create U6 tracks
+        # Create U6 tracks (edges)
         for city1, city2, distance in edges.u6_line():
             session.execute_write(cypher.create_track, city1, city2, "U6", distance)
 
