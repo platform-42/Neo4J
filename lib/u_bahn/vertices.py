@@ -31,7 +31,7 @@ def stations() -> List[str]:
         "Mohrenstraße",
         "Naturkundemuseum",
         "Neu-Westend",
-        "Nollendorfplatz"
+        "Nollendorfplatz",
         "Olympia-Stadion",
         "Oranienburger Tor",
         "Otisstraße",
