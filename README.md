@@ -50,8 +50,10 @@ Don't worry, they are stored in `./env/graph.env` so that they can be used as en
 
 
 ## RUNNING GRAPH PROGRAM
-* `pip3 install neo4j`
-* `cd ops`
-* `sh start.sh`
+```
+pip3 install neo4j
+cd ops
+sh start.sh
+```
 
 Check in the Neo4J webadmin tool if the graph is created.
