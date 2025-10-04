@@ -15,11 +15,12 @@ graph.py utilizes bolt driver to execute Cypher commands.
 * ./ops/start.sh -> shell script to run graph.py.  
 * ./graph.py -> main program.  
 
+
 ## NEO4J Aura
-In order to avoid Neo4J installation on-prem, you just create one in the cloud using Neo4J Aura.
-The account that you create is a PROJECT_ADMIN account. That account has NO access to graph database or graph tools. It is to setup your project in Neo4J Aura (cloud version). It can only be used to login into the Neo4J webinterface.
+In order to avoid Neo4J installation on-prem, you just create one in the cloud using Neo4J Aura. The account that you create is a PROJECT_ADMIN account. That account has NO access to graph database or graph tools. It is to setup your project in Neo4J Aura (cloud version). It can only be used to login into the Neo4J webinterface.
 
 Once you created an instance of a database, you will get your database user and credentials in the form of a download link. Don't forget to download it. If you don't do, you are marooned. Just delete the instance and recreate. This account can be used to access the database via the Python program (and bolt driver).
+
 
 ## DEV
 From the downloaded file, you see these entries:
@@ -38,6 +39,7 @@ AURA_INSTANCENAME=Neumann
 
 Don't worry, they are stored in ./env/graph.env so that they can be used as environment variables.
 
+
 ## CONNECTING FROM PYTHON
 driver: Driver = GraphDatabase.driver(URI, auth=basic_auth(NEO4J_USERNAME, NEO4J_PASSWORD))
 
@@ -45,6 +47,7 @@ driver: Driver = GraphDatabase.driver(URI, auth=basic_auth(NEO4J_USERNAME, NEO4J
 ## LOGIN INTO AURA
 user: diederick.de.buck@gmail.com
 password: M8rioAndretti!
+
 
 ## RUNNING GRAPH PROGRAM
 pip3 install neo4j
