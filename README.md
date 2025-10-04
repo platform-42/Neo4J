@@ -1,19 +1,26 @@
 # GRAPH DB EXPERIMENT
 
-`graph.py` is a Python pogram that utilizes Cypher interface to create and query a graph in Neo4J.
+`cities.py` is a Python pogram that utilizes Cypher interface to create and query a cities/road graph in Neo4J.
 
-The setup is such that `graph.py` is a client app that can run anywhere.
-graph.py utilizes bolt driver to execute Cypher commands.
+The setup is such that `cities.py` is a client app that can run anywhere. `cities.py` utilizes bolt driver to execute Cypher commands.
+
+`u_bahn.py` is a new graph that lays out U2 and U6 in Berlin.
 
 
 ## PROJECT STRUCTURE
+
 * `./doc/CypherV2.pdf` -> explanation of Cypher.  
-* `./lib/vertices.py` -> graph nodes.  
-* `./lib/edges.py` -> graph relationships.  
-* `./lib/cypher.py` -> cypher commands to create nodes and relationships.  
+* `./models/cities/vertices.py` -> graph nodes (cities).  
+* `./models/cities/edges.py` -> graph relationships (roads).  
+* `./models/cities/cypher.py` -> cypher commands to create nodes and relationships.  
+* `./models/u_bahn/vertices.py` -> graph nodes (stations).  
+* `./models/u_bahn/edges.py` -> graph relationships (line).  
+* `./models/u_bahn/cypher.py` -> cypher commands to create nodes and relationships.  
 * `./etc/graph.env` -> environment file with NEO4J Aura settings, derived from downloaded NEO4J Aura.  
-* `./ops/start.sh` -> shell script to run graph.py.  
-* `./graph.py` -> main program.  
+* `./ops/cities.sh` -> shell script to run graph.py.  
+* `./ops/u_bahn.sh` -> shell script to run graph.py.  
+* `./cities.py` -> main program cities graph.  
+* `./u_bahn.py` -> main program u_bahn graph.  
 
 
 ## NEO4J Aura
@@ -47,7 +54,7 @@ password: `M8rioAndretti!`.
 ```
 # pip3 install neo4j
 # cd ops
-# sh start.sh
+# sh cities.sh
 ```
 
 Check in the Neo4J webadmin tool if the graph is created.
