@@ -29,13 +29,13 @@ From the downloaded file, you see these entries:
 Beyond me, why they don't it in NEO4J_URI since there you see the same ID.
 
 Contents of the downloaded file should look like:
-`NEO4J_URI=neo4j+s://64de9e83.databases.neo4j.io`
-`NEO4J_USERNAME=neo4j`
-`NEO4J_PASSWORD=3oWWBg2lrkWrdQVi9RHQpDd2C51SqYl9RT04LDrngpA`
-`NEO4J_DATABASE=neo4j`
+* `NEO4J_URI=neo4j+s://64de9e83.databases.neo4j.io`
+* `NEO4J_USERNAME=neo4j`
+* `NEO4J_PASSWORD=3oWWBg2lrkWrdQVi9RHQpDd2C51SqYl9RT04LDrngpA`
+* `NEO4J_DATABASE=neo4j`
 
-`AURA_INSTANCEID=64de9e83`
-`AURA_INSTANCENAME=Neumann`
+* `AURA_INSTANCEID=64de9e83`
+* `AURA_INSTANCENAME=Neumann`
 
 Don't worry, they are stored in `./env/graph.env` so that they can be used as environment variables.
 
