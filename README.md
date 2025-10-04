@@ -24,11 +24,7 @@ Once you created an instance of a database, you will get your database user and 
 
 ## DEV
 From the downloaded file, you see these entries:
-`AURA_INSTANCENAME` is not needed. 
-`AURA_INSTANCEID` is the ID of the instance
-Beyond me, why they don't it in NEO4J_URI since there you see the same ID.
 
-Contents of the downloaded file should look like:
 ```
 NEO4J_URI=neo4j+s://64de9e83.databases.neo4j.io
 NEO4J_USERNAME=neo4j
@@ -40,10 +36,6 @@ AURA_INSTANCENAME=Neumann
 ```
 
 Don't worry, they are stored in `./env/graph.env` so that they can be used as environment variables.
-
-
-## CONNECTING FROM PYTHON
-`driver: Driver = GraphDatabase.driver(URI, auth=basic_auth(NEO4J_USERNAME, NEO4J_PASSWORD))`
 
 
 ## LOGIN INTO AURA
