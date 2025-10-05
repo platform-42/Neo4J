@@ -39,18 +39,42 @@ if __name__ == "__main__":
 
         # Create U1 tracks (edges)
         for city1, city2, distance in edges.u1_line():
-            session.execute_write(cypher.create_track, city1, city2, "U1", distance)
+            session.execute_write(
+                cypher.create_track, 
+                city1, 
+                city2, 
+                cypher.Line.U1, 
+                distance
+            )
 
         # Create U2 tracks (edges)
         for city1, city2, distance in edges.u2_line():
-            session.execute_write(cypher.create_track, city1, city2, "U2", distance)
+            session.execute_write(
+                cypher.create_track, 
+                city1, 
+                city2, 
+                cypher.Line.U2, 
+                distance
+            )
 
         # Create U3 tracks (edges)
         for city1, city2, distance in edges.u3_line():
-            session.execute_write(cypher.create_track, city1, city2, "U3", distance)
+            session.execute_write(
+                cypher.create_track, 
+                city1, 
+                city2, 
+                cypher.Line.U3, 
+                distance
+            )
 
         # Create U6 tracks (edges)
         for city1, city2, distance in edges.u6_line():
-            session.execute_write(cypher.create_track, city1, city2, "U6", distance)
+            session.execute_write(
+                cypher.create_track, 
+                city1, 
+                city2, 
+                cypher.Line.U6, 
+                distance
+            )
 
     driver.close()

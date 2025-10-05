@@ -1,4 +1,11 @@
 from neo4j import Transaction
+from strenum import StrEnum
+
+class Line(StrEnum):
+    U1 = "U1"
+    U2 = "U2"
+    U3 = "U3"
+    U6 = "U6"
 
 def clear_database(tx: Transaction) -> None:
     tx.run("MATCH (n) DETACH DELETE n")
