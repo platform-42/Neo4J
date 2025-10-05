@@ -10,9 +10,9 @@
 import os
 
 from neo4j import GraphDatabase, Driver, basic_auth
-from lib.u_bahn import edges
-from lib.u_bahn import vertices
-from lib.u_bahn import cypher
+from lib.models.u_bahn import edges
+from lib.models.u_bahn import vertices
+from lib.models.u_bahn import cypher
 
 if __name__ == "__main__":
     db_uri = os.getenv("NEO4J_URI")
