@@ -34,6 +34,19 @@ def u2_line() -> List[Tuple[str, str, float]]:
 
 def u3_line() -> List[Tuple[str, str, float]]:
     return [
+        ("Krumme Lanke", "Onkel Toms Hütte", 0.8),
+        ("Onkel Toms Hütte", "Oskar-Helene-Heim", 0.7),
+        ("Oskar-Helene-Heim", "Freie Universität (Thielplatz)", 0.9),
+        ("Freie Universität (Thielplatz)", "Dahlem-Dorf", 0.7),
+        ("Dahlem-Dorf", "Podbielskiallee", 0.9),
+        ("Podbielskiallee", "Breitenbachplatz", 0.8),
+        ("Breitenbachplatz", "Rüdesheimer Platz", 0.7),
+        ("Rüdesheimer Platz", "Heidelberger Platz", 0.8),
+        ("Heidelberger Platz", "Fehrbelliner Platz", 1.2),
+        ("Fehrbelliner Platz", "Hohenzollernplatz", 0.9),
+        ("Hohenzollernplatz", "Spichernstraße", 0.7),
+        ("Spichernstraße", "Augsburger Straße", 0.8),
+        ("Augsburger Straße", "Wittenbergplatz", 0.6),
     ]
 
 def u6_line() -> List[Tuple[str, str, float]]:
