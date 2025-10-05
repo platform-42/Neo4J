@@ -33,9 +33,9 @@ if __name__ == "__main__":
         # Create all cities (nodes)
         for city in vertices.cities():
             session.execute_write(cypher.create_city, city)
-        
+
         # Create all roads (edges)
         for city1, city2, distance, max_speed in edges.roads():
             session.execute_write(cypher.create_road, city1, city2, distance, max_speed)
-    
+
     driver.close()
