@@ -92,4 +92,4 @@ def stations(*station_lists: List[str]) -> List[str]:
         if station not in stations_processed:
             stations_processed.add(station)
             stations.append(station)
-    return stations_u2
+    return stations
