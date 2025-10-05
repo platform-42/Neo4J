@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """
     Filename: u_bahn.py
     Author: diederick de Buck (diederick.de.buck@gmail.com)
@@ -31,8 +33,8 @@ if __name__ == "__main__":
         # Create all stations (nodes)
         for name in vertices.stations(
             vertices.stations_u1(),
-            vertices.stations_u2(), 
-            vertices.stations_u3(), 
+            vertices.stations_u2(),
+            vertices.stations_u3(),
             vertices.stations_u6()
             ):
             session.execute_write(cypher.create_station, name)
@@ -40,40 +42,40 @@ if __name__ == "__main__":
         # Create U1 tracks (edges)
         for city1, city2, distance in edges.u1_line():
             session.execute_write(
-                cypher.create_track, 
-                city1, 
-                city2, 
-                cypher.Line.U1, 
+                cypher.create_track,
+                city1,
+                city2,
+                cypher.Line.U1,
                 distance
             )
 
         # Create U2 tracks (edges)
         for city1, city2, distance in edges.u2_line():
             session.execute_write(
-                cypher.create_track, 
-                city1, 
-                city2, 
-                cypher.Line.U2, 
+                cypher.create_track,
+                city1,
+                city2,
+                cypher.Line.U2,
                 distance
             )
 
         # Create U3 tracks (edges)
         for city1, city2, distance in edges.u3_line():
             session.execute_write(
-                cypher.create_track, 
-                city1, 
-                city2, 
-                cypher.Line.U3, 
+                cypher.create_track,
+                city1,
+                city2,
+                cypher.Line.U3,
                 distance
             )
 
         # Create U6 tracks (edges)
         for city1, city2, distance in edges.u6_line():
             session.execute_write(
-                cypher.create_track, 
-                city1, 
-                city2, 
-                cypher.Line.U6, 
+                cypher.create_track,
+                city1,
+                city2,
+                cypher.Line.U6,
                 distance
             )
 
