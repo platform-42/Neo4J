@@ -1,76 +1,95 @@
 from typing import List
 
-def stations() -> List[str]:
+def stations_u2() -> List[str]:
     return [
-        "Afrikanische Straße",
-        "Alexanderplatz",
-        "Alt-Mariendorf"
-        "Alt-Tegel",
-        "Alt-Tempelhof",
-        "Augsburger Straße",
-        "Bismarckstraße",
-        "Borsigwerke",
-        "Breitenbachplatz",
-        "Bülowstraße",
-        "Dahlem-Dorf",
-        "Deutsche Oper",
-        "Eberswalder Straße",
-        "Ernst-Reuter-Platz",
-        "Fehrbelliner Platz",
-        "Französische Straße",
-        "Freie Universität (Thielplatz)",
-        "Friedrichstraße",
-        "Gleisdreieck",
-        "Hallesches Tor",
-        "Hausvogteiplatz",
-        "Heidelberger Platz",
-        "Hohenzollernplatz",
-        "Holzhauser Straße",
-        "Kaiserdamm",
-        "Kaiserin-Augusta-Straße",
-        "Klosterstraße",
-        "Kochstraße",
-        "Krumme Lanke",
-        "Kurt-Schumacher-Platz",
-        "Leopoldplatz",
-        "Märkisches Museum",
-        "Mehringdamm",
-        "Mendelssohn-Bartholdy-Park",
-        "Mohrenstraße",
-        "Naturkundemuseum",
-        "Neu-Westend",
-        "Nollendorfplatz",
-        "Olympia-Stadion",
-        "Onkel Toms Hütte",
-        "Oranienburger Tor",
-        "Oskar-Helene-Heim",
-        "Otisstraße",
         "Pankow",
-        "Paradestraße",
-        "Platz der Luftbrücke",
-        "Podbielskiallee",
-        "Potsdamer Platz",
-        "Rehberge",
-        "Reinickendorfer Straße",
-        "Rosa-Luxemburg-Platz",
-        "Rüdesheimer Platz",
-        "Ruhleben",
-        "Scharnweberstraße",
-        "Schönhauser Allee",
-        "Schwartzkopffstraße",
-        "Seestraße",
-        "Senefelderplatz",
-        "Sophie-Charlotte-Platz",
-        "Spichernstraße",     # interchange with U9
-        "Spittelmarkt",
-        "Stadtmitte",
-        "Tempelhof",
-        "Theodor-Heuss-Platz",
-        "Ullsteinstraße",
         "Vinetastraße",
-        "Wedding",
-        "Westphalweg",
-        "Wittenbergplatz"     # interchange with U1 & U2
+        "Schönhauser Allee",
+        "Eberswalder Straße",
+        "Senefelderplatz",
+        "Rosa-Luxemburg-Platz",
+        "Alexanderplatz",      # major interchange (U2, U5, U8)
+        "Klosterstraße",
+        "Märkisches Museum",
+        "Spittelmarkt",
+        "Hausvogteiplatz",
+        "Stadtmitte",          # interchange (U2, U6)
+        "Mohrenstraße",
+        "Potsdamer Platz",
+        "Mendelssohn-Bartholdy-Park",
+        "Gleisdreieck",        # interchange (U1, U3)
+        "Bülowstraße",
+        "Nollendorfplatz",     # interchange (U1, U3, U4)
+        "Wittenbergplatz",     # interchange (U1, U3)
         "Zoologischer Garten",
+        "Ernst-Reuter-Platz",
+        "Deutsche Oper",
+        "Bismarckstraße",      # interchange (U7)
+        "Sophie-Charlotte-Platz",
+        "Kaiserdamm",
+        "Theodor-Heuss-Platz",
+        "Neu-Westend",
+        "Olympia-Stadion",
+        "Ruhleben"
     ]
 
+def stations_u3() -> List[str]:
+    return [
+        "Krumme Lanke",
+        "Onkel Toms Hütte",
+        "Oskar-Helene-Heim",
+        "Freie Universität (Thielplatz)",
+        "Dahlem-Dorf",
+        "Podbielskiallee",
+        "Breitenbachplatz",
+        "Rüdesheimer Platz",
+        "Heidelberger Platz",
+        "Fehrbelliner Platz",
+        "Hohenzollernplatz",
+        "Spichernstraße",     # interchange with U9
+        "Augsburger Straße",
+        "Wittenbergplatz"     # <-- Important! Interchange with U1 & U2
+    ]
+
+def stations_u6() -> List[str]:
+    return [
+        "Alt-Tegel",
+        "Borsigwerke",
+        "Holzhauser Straße",
+        "Otisstraße",
+        "Scharnweberstraße",
+        "Kurt-Schumacher-Platz",
+        "Afrikanische Straße",
+        "Rehberge",
+        "Seestraße",
+        "Leopoldplatz",
+        "Wedding",
+        "Reinickendorfer Straße",
+        "Schwartzkopffstraße",
+        "Naturkundemuseum",
+        "Oranienburger Tor",
+        "Friedrichstraße",
+        "Französische Straße",
+        "Stadtmitte",
+        "Kochstraße",
+        "Hallesches Tor",
+        "Mehringdamm",
+        "Platz der Luftbrücke",
+        "Paradestraße",
+        "Tempelhof",
+        "Alt-Tempelhof",
+        "Kaiserin-Augusta-Straße",
+        "Ullsteinstraße",
+        "Westphalweg",
+        "Alt-Mariendorf"
+    ]
+
+def stations(*station_lists: List[str]) -> List[str]:
+    stations: List[str] = []
+    stations_processed: set[str] = set()
+
+    for station in [s for station_list in station_lists for s in station_list]:
+        if station not in stations_processed:
+            stations_processed.add(station)
+            stations.append(station)
+    return stations_u2

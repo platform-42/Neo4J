@@ -20,7 +20,7 @@ if __name__ == "__main__":
         session.execute_write(cypher.clear_database)
 
         # Create all stations (nodes)
-        for name in vertices.stations():
+        for name in vertices.stations(vertices.stations_u2(), vertices.stations_u3(), vertices.stations_u6()):
             session.execute_write(cypher.create_station, name)
 
         # Create U2 tracks (edges)
