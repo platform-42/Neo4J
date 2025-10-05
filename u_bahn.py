@@ -20,13 +20,23 @@ if __name__ == "__main__":
         session.execute_write(cypher.clear_database)
 
         # Create all stations (nodes)
-        for name in vertices.stations(vertices.stations_u2(), vertices.stations_u3(), vertices.stations_u6()):
+        for name in vertices.stations(
+            vertices.stations_u1(),
+            vertices.stations_u2(), 
+            vertices.stations_u3(), 
+            vertices.stations_u6()
+            ):
             session.execute_write(cypher.create_station, name)
+
+        # Create U1 tracks (edges)
+        for city1, city2, distance in edges.u1_line():
+            session.execute_write(cypher.create_track, city1, city2, "U1", distance)
 
         # Create U2 tracks (edges)
         for city1, city2, distance in edges.u2_line():
             session.execute_write(cypher.create_track, city1, city2, "U2", distance)
 
+        # Create U3 tracks (edges)
         for city1, city2, distance in edges.u3_line():
             session.execute_write(cypher.create_track, city1, city2, "U3", distance)
 

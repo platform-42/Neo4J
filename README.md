@@ -4,7 +4,11 @@
 
 The setup is such that `cities.py` is a client app that can run anywhere. `cities.py` utilizes bolt driver to execute Cypher commands.
 
-`u_bahn.py` is a new graph that lays out U2 (Pankow/Ruhleben) and U6 (Alt Tegel/Alt-Mariendorf) in Berlin.
+`u_bahn.py` is a new graph that lays out U-bahn in Berlin.
+* U1 (Uhlandstraße/Warschauer Straße)
+* U2 (Pankow/Ruhleben) 
+* U3 (Krumme Lanke/Wittenbergplatz)
+* U6 (Alt Tegel/Alt-Mariendorf)
 
 
 ## PROJECT STRUCTURE

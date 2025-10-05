@@ -1,5 +1,21 @@
 from typing import List, Tuple
 
+def u1_line() -> List[Tuple[str, str, float]]:
+    return [
+        ("Uhlandstraße", "Kurfürstenstraße", 1.0),
+        ("Kurfürstenstraße", "Hallerstraße", 1.2),
+        ("Hallerstraße", "Gleisdreieck", 1.5),
+        ("Gleisdreieck", "Wittenbergplatz", 1.0),
+        ("Wittenbergplatz", "Nollendorfplatz", 0.8),
+        ("Nollendorfplatz", "Kurfürstenstraße", 0.5),  # optional depending on path layout
+        ("Gleisdreieck", "Hallesches Tor", 1.0),
+        ("Hallesches Tor", "Prinzenstraße", 0.9),
+        ("Prinzenstraße", "Kottbusser Tor", 1.1),
+        ("Kottbusser Tor", "Görlitzer Bahnhof", 1.2),
+        ("Görlitzer Bahnhof", "Schlesisches Tor", 0.8),
+        ("Schlesisches Tor", "Warschauer Straße", 1.0)
+    ]
+    
 def u2_line() -> List[Tuple[str, str, float]]:
     return [
         ("Pankow", "Vinetastraße", 1.2),

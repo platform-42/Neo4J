@@ -1,5 +1,23 @@
 from typing import List
 
+def stations_u1() -> List[str]:
+    return [
+        "Uhlandstraße",
+        "Kurfürstenstraße",
+        "Hallerstraße",
+        "Gleisdreieck",
+        "Wittenbergplatz",
+        "Nollendorfplatz",
+        "Kurfürstenstraße",
+        "Gleisdreieck",
+        "Hallesches Tor",
+        "Prinzenstraße",
+        "Kottbusser Tor",
+        "Görlitzer Bahnhof",
+        "Schlesisches Tor",
+        "Warschauer Straße"
+    ]
+
 def stations_u2() -> List[str]:
     return [
         "Pankow",
