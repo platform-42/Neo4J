@@ -84,10 +84,20 @@ def stations_u6() -> List[str]:
         "Alt-Mariendorf"
     ]
 
+#
+#   stations:  
+#       stations merges all stations of all lines and de-dups them
+#       *station_list means: accept any number of lists as input (variable number)
+#       in our case stations_u2(), stations_u3() and stations_u6()
+#
 def stations(*station_lists: List[str]) -> List[str]:
     stations: List[str] = []
     stations_processed: set[str] = set()
-
+    #
+    #   for station_list in station_lists is outer loop that produces a list
+    #   for s in station_list is the inner loop
+    #   [s for ...] is the resulted flattened list
+    #
     for station in [s for station_list in station_lists for s in station_list]:
         if station not in stations_processed:
             stations_processed.add(station)
