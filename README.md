@@ -49,13 +49,6 @@ AURA_INSTANCENAME=Neumann
 Don't worry, they are stored in `./env/graph.env` so that they can be used as environment variables. 
 
 
-## LOGIN INTO AURA
-user: `diederick.de.buck@gmail.com`.  
-password: `M8rioAndretti!`.  
-
-When you go to query, the Graph interface doesn't show you a graph that you expect. Once you execute your query against the graph, the query is bounded and only then you see a correct representation of your paths within the graph.
-
-
 ## RUNNING GRAPH PROGRAM
 ```
 # pip3 install neo4j

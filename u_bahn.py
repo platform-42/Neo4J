@@ -1,3 +1,12 @@
+"""
+    Filename: u_bahn.py
+    Author: diederick de Buck (diederick.de.buck@gmail.com)
+    Date: 2024-06-11
+    Version: 1.0
+    Description: 
+        Generates graph consisting of U1, U2, U3 and U6 stations and paths in Berlin
+        for exploring Neo4J
+"""
 import os
 
 from neo4j import GraphDatabase, Driver, basic_auth
