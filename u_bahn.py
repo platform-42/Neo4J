@@ -26,7 +26,7 @@ if __name__ == "__main__":
         db_uri,
         auth=basic_auth(db_username, db_password)
     )
-    
+
     with driver.session(database=db_database) as session:
         session.execute_write(cypher.clear_database)
 
