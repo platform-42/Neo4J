@@ -71,7 +71,6 @@ def stations() -> List[str]:
         "Wedding",
         "Westphalweg",
         "Wittenbergplatz"     # interchange with U1 & U2
-        "Wittenbergplatz",
         "Zoologischer Garten",
     ]
 
