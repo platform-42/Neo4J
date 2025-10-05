@@ -1,3 +1,12 @@
+"""
+    Filename: cities.py
+    Author: diederick de Buck (diederick.de.buck@gmail.com)
+    Date: 2025-10-05
+    Version: 1.0
+    Description: 
+        Generates graph consisting of cities in Netherlands with connecting roads
+        for exploring Neo4J
+"""
 import os
 
 from neo4j import GraphDatabase, Driver, basic_auth

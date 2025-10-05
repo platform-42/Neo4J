@@ -1,7 +1,7 @@
 """
     Filename: u_bahn.py
     Author: diederick de Buck (diederick.de.buck@gmail.com)
-    Date: 2024-06-11
+    Date: 2025-10-05
     Version: 1.0
     Description: 
         Generates graph consisting of U1, U2, U3 and U6 stations and paths in Berlin
