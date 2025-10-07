@@ -43,7 +43,6 @@ if __name__ == "__main__":
         recs: List[Dict[str, str | float | int]] = session.execute_read(cypher.recommend_movies_weighted, arguments.user)
         print(f"[{arguments.user}]")
         for rec in recs:
-            print(f"{rec['recommendation']} likes={rec['genre_overlap']}")
+            print(f"{rec['recommendation']} score={rec['collaborative_score']:.2f}, overlap={rec['genre_overlap']}")
         print("*************************")
-
     driver.close()
