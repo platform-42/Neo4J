@@ -28,8 +28,8 @@ if __name__ == "__main__":
 
     with driver.session(database=db_database) as session:
         session.execute_write(cypher.clear_database)
-        session.execute_write(vertices.create_users, vertices.create_users())
-        session.execute_write(vertices.create_movies, vertices.create_movies())
-        session.execute_write(vertices.create_genres, vertices.create_genres())
+        session.execute_write(cypher.create_users, vertices.create_users())
+        session.execute_write(cypher.create_movies, vertices.create_movies())
+        session.execute_write(cypher.create_genres, vertices.create_genres())
 
     driver.close()
