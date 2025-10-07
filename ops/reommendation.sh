@@ -1,3 +1,3 @@
 cd ..
 source etc/graph.env
-python3 recommendation.py
+python3 recommendation.py --user="Kiran"
