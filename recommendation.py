@@ -31,5 +31,6 @@ if __name__ == "__main__":
         session.execute_write(cypher.create_users, vertices.create_users())
         session.execute_write(cypher.create_movies, vertices.create_movies())
         session.execute_write(cypher.create_genres, vertices.create_genres())
+        session.execute_write(cypher.create_likes, edges.create_likes())
 
     driver.close()
