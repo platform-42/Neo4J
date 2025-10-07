@@ -1,0 +1,11 @@
+from typing import List, Tuple, Dict
+
+def create_likes() -> List[Tuple[str, str, Dict[str, int | str]]]:
+    return [
+        ("Alice", "Inception", {"rating": 5, "watched_times": 3, "timestamp": "2025-10-01"}),
+        ("Alice", "Avatar", {"rating": 4, "watched_times": 2, "timestamp": "2025-09-20"}),
+        ("Bob", "Interstellar", {"rating": 5, "watched_times": 4, "timestamp": "2025-10-02"}),
+        ("Bob", "Inception", {"rating": 4, "watched_times": 1, "timestamp": "2025-09-15"}),
+        ("Carol", "Titanic", {"rating": 5, "watched_times": 2, "timestamp": "2025-09-10"}),
+        ("Carol", "Avatar", {"rating": 4, "watched_times": 3, "timestamp": "2025-10-01"}),
+    ]
