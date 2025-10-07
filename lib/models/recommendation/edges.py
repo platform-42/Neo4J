@@ -6,7 +6,7 @@ def create_likes() -> List[Tuple[str, str, Dict[str, int | str]]]:
         ("Alice", "Avatar", {"rating": 4, "watched_times": 2, "timestamp": "2025-09-20"}),
         ("Bob", "Interstellar", {"rating": 5, "watched_times": 4, "timestamp": "2025-10-02"}),
         ("Bob", "Inception", {"rating": 4, "watched_times": 1, "timestamp": "2025-09-15"}),
-        ("Bob", "Dog Soldier", {"rating": 3, "watched_times": 1, "timestamp": "2025-10-01"}),
+        ("Bob", "Dog Soldier", {"rating": 5, "watched_times": 1, "timestamp": "2025-10-01"}),
         ("Carol", "Basic Instinct", {"rating": 5, "watched_times": 2, "timestamp": "2025-09-10"}),
         ("Carol", "Titanic", {"rating": 5, "watched_times": 2, "timestamp": "2025-09-10"}),
         ("Carol", "Avatar", {"rating": 4, "watched_times": 3, "timestamp": "2025-10-01"}),
