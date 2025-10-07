@@ -10,6 +10,8 @@ def create_likes() -> List[Tuple[str, str, Dict[str, int | str]]]:
         ("Carol", "Titanic", {"rating": 5, "watched_times": 2, "timestamp": "2025-09-10"}),
         ("Carol", "Avatar", {"rating": 4, "watched_times": 3, "timestamp": "2025-10-01"}),
         ("Kiran", "Titanic", {"rating": 5, "watched_times": 7, "timestamp": "2025-10-01"}),
+        ("Diederick", "Few Good Men", {"rating": 5, "watched_times": 1, "timestamp": "2025-10-01"}),
+        ("Diederick", "39 Steps", {"rating": 5, "watched_times": 1, "timestamp": "2025-10-01"}),
     ]
 
 def create_movie_genres() -> List[Tuple[str, str]]:
@@ -18,5 +20,8 @@ def create_movie_genres() -> List[Tuple[str, str]]:
         ("Interstellar", "Sci-Fi"),
         ("Avatar", "Sci-Fi"),
         ("Titanic", "Romance"),
-        ("Basic Instinct", "Romance")
+        ("Basic Instinct", "Romance"),
+        ("Dog Soldier", "Drama"),
+        ("Few Good Men", "Drama"),
+        {"39 Steps", "Thriller"}
 ]
