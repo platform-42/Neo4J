@@ -39,13 +39,13 @@ def create_movie_genres(tx: Transaction, movie_genres: List[Tuple[str, str]]) ->
 
 def recommend_movies_weighted(tx: Transaction, username: str) -> List[Dict[str, str | float | int]]:
     query: str = """
-        MATCH (u:User {name: $username})-[r1:LIKED]->(m:Movie)<-[r2:LIKED]-(other:User)-[r3:LIKED]->(rec:Movie)
+        MATCH (u:User {name: $username})-[r1:LIKED]->(m:Movie)-[:HAS_GENRE]->(g:Genre)<-[:HAS_GENRE]-(rec:Movie)<-[r2:LIKED]-(other:User)
         WHERE NOT (u)-[:LIKED]->(rec)
-        WITH rec, 
-            SUM(r2.rating * r3.rating) AS score, 
-            COUNT(*) AS commonLikes
-        RETURN rec.title AS recommendation, score, commonLikes
-        ORDER BY score DESC, commonLikes DESC
+        WITH rec,
+            SUM(r1.rating * r2.rating) AS collaborative_score,
+            COUNT(DISTINCT g) AS genre_overlap
+        RETURN rec.title AS recommendation, collaborative_score, genre_overlap
+        ORDER BY collaborative_score DESC, genre_overlap DESC
         LIMIT 5
     """
 #    print(f"{query}")
