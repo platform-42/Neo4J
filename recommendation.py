@@ -33,7 +33,7 @@ if __name__ == "__main__":
         session.execute_write(cypher.create_genres, vertices.create_genres())
         session.execute_write(cypher.create_likes, edges.create_likes())
         session.execute_write(cypher.create_movie_genres, edges.create_movie_genres())
-        recs: List[Dict[str, str | float | int]] = session.execute_read(cypher.recommend_movies_weighted, "Alice")
+        recs: List[Dict[str, str | float | int]] = session.execute_read(cypher.recommend_movies_weighted, "Kiran")
         for rec in recs:
             print(f"{rec['recommendation']} score={rec['score']:.2f}, likes={rec['commonLikes']}")
 
