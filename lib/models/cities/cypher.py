@@ -1,6 +1,5 @@
 from neo4j import Transaction
 
-
 def clear_database(tx: Transaction) -> None:
     tx.run("MATCH (n) DETACH DELETE n")
 
