@@ -48,6 +48,6 @@ def recommend_movies_weighted(tx: Transaction, username: str) -> List[Dict[str, 
         ORDER BY score DESC, commonLikes DESC
         LIMIT 5
     """
-    print(f"{query}")
+#    print(f"{query}")
     result = tx.run(query, username=username)
     return [dict(record) for record in result]
