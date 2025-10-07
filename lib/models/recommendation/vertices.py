@@ -5,10 +5,10 @@ def create_users() -> List[Dict[str, str]]:
         {"name": "Alice"},
         {"name": "Bob"},
         {"name": "Carol"},
-        {"name": "Kiran"},
-        {"name": "Sachin"},
         {"name": "Diederick"},
-        {"name": "Kaspert"}
+        {"name": "Kaspert"},
+        {"name": "Kiran"},
+        {"name": "Sachin"}
     ]
 
 def create_movies() -> List[Dict[str, str]]:
