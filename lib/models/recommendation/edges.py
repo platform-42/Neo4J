@@ -8,6 +8,7 @@ def create_likes() -> List[Tuple[str, str, Dict[str, int | str]]]:
         ("Bob", "Inception", {"rating": 4, "watched_times": 1, "timestamp": "2025-09-15"}),
         ("Bob", "Dog Soldier", {"rating": 5, "watched_times": 6, "timestamp": "2025-10-01"}),
         ("Bob", "Few Good Men", {"rating": 5, "watched_times": 6, "timestamp": "2025-10-01"}),
+        ("Bob", "Bollywood and Santa", {"rating": 5, "watched_times": 6, "timestamp": "2025-10-01"}),
         ("Bob", "39 Steps", {"rating": 5, "watched_times": 6, "timestamp": "2025-10-01"}),
         ("Carol", "Basic Instinct", {"rating": 5, "watched_times": 2, "timestamp": "2025-09-10"}),
         ("Carol", "Titanic", {"rating": 5, "watched_times": 2, "timestamp": "2025-09-10"}),
@@ -28,5 +29,7 @@ def create_movie_genres() -> List[Tuple[str, str]]:
         ("Dog Soldier", "Drama"),
         ("Few Good Men", "Drama"),
         {"39 Steps", "Thriller"},
-        {"Night Moves", "Drama"}
+        {"Night Moves", "Drama"},
+        {"Bollywood and Santa", "Bollywood"}
+
 ]

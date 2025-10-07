@@ -20,7 +20,9 @@ def create_movies() -> List[Dict[str, str]]:
         {"title": "Basic Instinct"},
         {"title": "39 Steps"},
         {"title": "Dog Soldier"},
-        {"title": "Night Moves"}
+        {"title": "Night Moves"},
+        {"title": "Bollywood and Santa"}
+
     ]
 
 def create_genres() -> List[Dict[str, str]]:
