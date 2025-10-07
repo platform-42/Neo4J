@@ -25,5 +25,6 @@ def create_genres() -> List[Dict[str, str]]:
         {"name": "Romance"},
         {"name": "Bollywood"},
         {"name": "Film noir"},
-        {"name": "Action"}
+        {"name": "Action"},
+        {"name": "Drama"},
     ]
