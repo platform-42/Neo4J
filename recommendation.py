@@ -9,7 +9,7 @@
         Amazon style recommendation
 """
 import os
-
+from typing import List, Dict
 from neo4j import GraphDatabase, Driver, basic_auth
 from lib.models.recommendation import edges
 from lib.models.recommendation import vertices
@@ -33,4 +33,8 @@ if __name__ == "__main__":
         session.execute_write(cypher.create_genres, vertices.create_genres())
         session.execute_write(cypher.create_likes, edges.create_likes())
         session.execute_write(cypher.create_movie_genres, edges.create_movie_genres())
+        recs: List[Dict[str, str | float | int]] = session.execute_read(cypher.recommend_movies_weighted, "Kiran")
+        for rec in recs:
+            print(f"  • {rec["recommendation"]} (score={rec["score"]:.2f}, shared likes={rec["commonLikes"]})")
+
     driver.close()
