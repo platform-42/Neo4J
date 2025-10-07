@@ -28,3 +28,10 @@ def create_likes(tx: Transaction, likes: List[Tuple[str, str, Dict[str, int | st
         """, username=username, movie_title=movie_title,
              rating=props["rating"], watched_times=props["watched_times"],
              timestamp=props["timestamp"])
+
+def create_movie_genres(tx: Transaction, movie_genres: List[Tuple[str, str]]) -> None:
+    for movie_title, genre_name in movie_genres:
+        tx.run("""
+            MATCH (m:Movie {title: $movie_title}), (g:Genre {name: $genre_name})
+            CREATE (m)-[:HAS_GENRE]->(g)
+        """, movie_title=movie_title, genre_name=genre_name)

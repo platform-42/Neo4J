@@ -9,3 +9,11 @@ def create_likes() -> List[Tuple[str, str, Dict[str, int | str]]]:
         ("Carol", "Titanic", {"rating": 5, "watched_times": 2, "timestamp": "2025-09-10"}),
         ("Carol", "Avatar", {"rating": 4, "watched_times": 3, "timestamp": "2025-10-01"}),
     ]
+
+def create_movie_genres() -> List[Tuple[str, str]]:
+    return [
+        ("Inception", "Sci-Fi"),
+        ("Interstellar", "Sci-Fi"),
+        ("Avatar", "Sci-Fi"),
+            ("Titanic", "Romance"),
+]

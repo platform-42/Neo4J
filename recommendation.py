@@ -32,5 +32,5 @@ if __name__ == "__main__":
         session.execute_write(cypher.create_movies, vertices.create_movies())
         session.execute_write(cypher.create_genres, vertices.create_genres())
         session.execute_write(cypher.create_likes, edges.create_likes())
-
+        session.execute_write(cypher.create_movie_genres, edges.create_movie_genres())
     driver.close()
