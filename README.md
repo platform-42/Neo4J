@@ -10,21 +10,35 @@ The setup is such that `cities.py` is a client app that can run anywhere. `citie
 * U3 (Krumme Lanke/Wittenbergplatz)
 * U6 (Alt Tegel/Alt-Mariendorf)
 
+`recommendation.py` is a movie recommendation system.
+Movie, Movie-genre, Actor, Users are vertices (entities)
+
 
 ## PROJECT STRUCTURE
 
+### documentation -> /doc
 * `./doc/CypherV2.pdf` -> explanation of Cypher.  
-* `./models/cities/vertices.py` -> graph nodes (cities).  
-* `./models/cities/edges.py` -> graph relationships (roads).  
-* `./models/cities/cypher.py` -> cypher commands to create nodes and relationships.  
-* `./models/u_bahn/vertices.py` -> graph nodes (stations).  
-* `./models/u_bahn/edges.py` -> graph relationships (line).  
-* `./models/u_bahn/cypher.py` -> cypher commands to create nodes and relationships.  
+
+### graph model -> /models
+* `./models/cities/` -> model for cities
+* `./models/u_bahn/` -> model for u_bahn
+* `./models/recommendation/` -> model for recommendation
+A model directory contains 3 files:
+* `./cypher.py` -> cypher interface
+* `./vertices.py` -> your entities
+* `./edges.py` -> your relationships
+
+### configuration data -> /etc
 * `./etc/graph.env` -> environment file with NEO4J Aura settings, derived from downloaded NEO4J Aura.  
+
+### operator procedures -> /ops
 * `./ops/cities.sh` -> shell script to run cities.py.  
 * `./ops/u_bahn.sh` -> shell script to run u_bahn.py.  
+
+### main programs -> ./
 * `./cities.py` -> main program cities graph.  
 * `./u_bahn.py` -> main program u_bahn graph.  
+* `./recommendation.py` -> main program recommendation graph.  
 
 
 ## NEO4J Aura
@@ -55,6 +69,7 @@ Don't worry, they are stored in `./env/graph.env` so that they can be used as en
 # cd ops
 # sh cities.sh
 # sh u_bahn.sh
+# sh recommendation.sh
 ```
 
 Check in the Neo4J webadmin tool if the graph is created.
